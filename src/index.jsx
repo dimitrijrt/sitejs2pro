@@ -7,7 +7,7 @@ import Footer from './components/Header/Footer/footer.jsx'
 import Location from './pages/Home/locations/location1.jsx'
 import Apropos from './pages/Home/Apropos/Apropos.jsx'
 import Error from './components/Header/Error/error.jsx'
-import location from './location.json'
+
 
 ReactDOM.render(
   <React.StrictMode>

@@ -3,6 +3,7 @@ import img from '../../../Image-source2.png';
 import styled from 'styled-components'
 import location from '../../../location.json'
 import Card from '../../../components/Header/Card/card.jsx'
+import style from '../../../style.scss'
 
 const AproposImage = styled.img `
 width:100%;

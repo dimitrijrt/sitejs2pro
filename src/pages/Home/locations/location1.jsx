@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import logo from '../../../Carrousel.png';
 import location from '../../../location.json'
 import Card from '../../../components/Header/Card/card.jsx'
+import style from '../../../style.scss'
 
 
 

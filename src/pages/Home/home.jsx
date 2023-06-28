@@ -1,7 +1,8 @@
 
 
 import styled from 'styled-components'
-import logo from '../../Image-source1.png';
+import logo from '../../Image-source1.png'
+import style from '../../style.scss'
 
 const HomeImage = styled.img `
 width:100%;
@@ -33,6 +34,7 @@ cursor:pointer;
 width:340px;
 
 
+
 `
 function Home() {
   return (
@@ -42,7 +44,7 @@ function Home() {
        <HomeImage src={logo} alt="freelance"  />
        <CardsContainer>
         <Card href="/location">titre de la location</Card>
-         <Card>titre de la location</Card>
+         <a href="/location"> <Card>titre de la location</Card></a>
          <Card>titre de la location</Card>
          <Card>titre de la location</Card>
          <Card>titre de la location</Card>
