@@ -1,0 +1,22 @@
+.styledlink {
+padding: 15px;
+    color: salmon;
+    text-decoration: none;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.styledlin:active {
+    text-decoration: underline;
+}
+
+.nav {
+    display: flex;
+        justify-content: space-between;
+}
+
+.haerderimg {
+        height: 80px;
+        width: 100%;
+        object-fit: cover
+}

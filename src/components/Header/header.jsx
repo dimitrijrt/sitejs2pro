@@ -1,29 +1,24 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import logo from '../../LOGO.png';
+import logo from '../../assets/images/LOGO.png';
+import stylepage from './header.scss'
 
 
-const StyledLink = styled(Link)`
-    padding: 15px;
-    color: salmon;
-    text-decoration: none;
-    font-size: 18px;
-    text-decoration:underline;
+const StyledLink = styled(Link)``
 
-`
 
 
 
 function Header() {
   return (
-    <Nav>
+    <Nav className='nav'>
     <div className="logo">
-        <HeaderImage src={logo} alt="freelance" height={80} width={80} />
+        <HeaderImage className='headerimg' src={logo} alt="freelance"  />
     </div>
       
       <div className='liens'>
-        <StyledLink to="/home">Accueil</StyledLink>
-        <StyledLink to="/apropos"$isFullLink>A propos</StyledLink>
+        <StyledLink className='styledlink' to="/">Accueil</StyledLink>
+        <StyledLink  className='styledlink' to="/apropos"$isFullLink>A propos</StyledLink>
       
       </div>
       
@@ -43,16 +38,13 @@ function Header() {
 }
 
 const Nav = styled.nav `
-display:flex;
-justify-content:space-between;
+
 `
 
 
 
 const HeaderImage = styled.img`
-    height: 80px;
-    width: 100%;
-    object-fit:cover
+  
 `
 
 
