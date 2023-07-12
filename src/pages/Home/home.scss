@@ -30,9 +30,29 @@
     
 }
 
+
+
 .titrehome {
  color: white;
  font-size: 18px;
  padding: 30px 20px;
  
+}
+
+.titlekasa {
+        color: white;
+    
+        font-weight: 500;
+         font-size: clamp(20px, 4vw, 48px);
+        position: absolute;
+            top: 22.04%;
+            left: 20.6%;
+            right: 20.53%;
+            bottom: 45.05%;
+            font-size: 48px;
+            font-weight: 500;
+            line-height: 100%;
+       
+        
+
 }

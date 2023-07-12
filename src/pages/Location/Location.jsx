@@ -1,19 +1,18 @@
 import { useParams} from 'react-router-dom'
-import styled from 'styled-components'
+
 import logo from '../../assets/images/Carrousel.png';
 import data from '../../location.json'
 import Card from '../../components/Card/card.jsx'
 import style from '../../style.scss'
 import pagestyle from './location.scss'
+import {useEffect, useState} from "react";
+import Stars from "../../assets/icons/Stars"
+import Carrousel from '../../components/Carrousel/carrousel'
 
 
-const LocationImage = styled.img`
-  
-`
 
-const CardsContainer = styled.div`
- 
-`
+
+
 
 function Location() {
     const {id} = useParams();
@@ -23,22 +22,40 @@ function Location() {
         
         <div>
             
-            <LocationImage className='img' src={location.pictures[0]} alt="freelance"/>
-            <div className='link'>
-                <button>vrbrvio</button>
-                <button>vrbrvio</button>
-                <button>vrbrvio</button>
+            <img className='img' src={location.pictures[0]} alt="freelance"/>
+            <Carrousel/>
+            
+            
+           
+           
+            <div className='titrestars'>
+                <span className='titre'>{location.title}</span>
+                 
+                <li className='stars'>
+                    <Stars/>
+                    <Stars/>
+                    <Stars/>
+                    <Stars/>
+                    <Stars/>          
+                </li>
+             </div>
+             <div className='link'>
+                <span>Cozy</span>
+                <span>Canal</span>
+                <span>Paris 10</span>
             </div>
            
-             <span className='titre'>{location.title}</span>
-            <CardsContainer className='cardcontainloc'>
+             <div className='cardcontainloc'>
                 <Card 
                     description={location.description}
                     rating={location.rating}
-                     equipments={location.equipments}
+                    equipments={location.equipments}
                 />
+             </div>
                 
-            </CardsContainer>
+      
+            
+                
             
                 
                 

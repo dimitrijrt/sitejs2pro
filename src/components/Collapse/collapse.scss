@@ -1,3 +1,6 @@
+
+
+
 .rectangle {
 
     color: white;
@@ -15,6 +18,27 @@
 }
 
 .texte {
-    background: grey;
+    background: #F6F6F6;
     color: salmon;
+    margin: 0;
+    width:82%;
+}
+
+
+
+.rectangle {
+
+&:active .Arrow {
+    transition: all 0.2s ease-in-out;
+    transform: rotate(180deg);
+   
+}
+    
+    
+}
+
+.collapse {
+ margin: auto;
+ display: block;
+ text-align: center;
 }

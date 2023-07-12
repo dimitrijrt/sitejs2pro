@@ -39,3 +39,15 @@
     
     gap: 100px
 }
+
+
+.column {
+
+    &:active .Arrow {
+        transition: all 0.2s ease-in-out;
+        transform: rotate(180deg);
+
+    }
+
+
+}

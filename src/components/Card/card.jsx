@@ -1,43 +1,45 @@
 import PropTypes from 'prop-types'
-
 import style from './card.scss'
-
 import React, { useState } from 'react';
-
-const App = () => {
-  const [elementVisible, setElementVisible] = useState(false);
-};
+import ArrowUp from "../../assets/icons/ArrowUp";
+import Arrowlft from "../../assets/icons/Arrowlft";
 
 
 
-function Card({ title , description, rating, pictures, equipments }) {
+
+
+function Card({ title , description, rating, pictures, equipments }) { const Appears = ({item}) => {
+    const [toggle, setToggle] = useState(false);
     return (
 
-       
+   
+   
+
     <div className='menu'>
+        
          <div className='column'>
                 <div className='description'>
                     <span>Description</span>
-                    <span >^</span>
+                    <span ><ArrowUp /></span>
                 </div>
-                 <div className='wrapper'>
+                 <div className='wrapper'onClick={() => setToggle(!toggle)}>
                     <div className='span'>
                         <h1>{title}</h1>
-                        <p>{description}</p>
+                        {toggle ?<p>{description}</p> : ''}
                         <span>{rating}</span>
                     </div>
                 
                 
                 
                 </div>
-
+            
                
             </div>
 
              <div className='column'>
                 <div className='description'>
                     <span>Equipements</span>
-                    <span >^</span>
+                    <span  ><ArrowUp /></span>
                 </div>
                  <div className='wrapper'>
                     <div className='span'>
@@ -52,31 +54,17 @@ function Card({ title , description, rating, pictures, equipments }) {
                
             </div>
     </div>
+
+   
       
-
-            
-                
-        
-            
-            
-
-            
-                
-       
-            
-                
-            
-            
-         
-          
-           
+   
 
        
-    )
+        )
+    }
+
+    
 }
-
-
-
  
 
 
@@ -85,7 +73,7 @@ Card.propTypes = {
     description: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     rating: PropTypes.string.isRequired,
-    équipements: PropTypes.string.isRequired
+    equipments: PropTypes.string.isRequired,
 }
 
 
@@ -98,5 +86,6 @@ Card.defaultProps = {
   equipments:'',
 }
 
-
+ 
 export default Card
+

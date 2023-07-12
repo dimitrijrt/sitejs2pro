@@ -6,23 +6,9 @@ import {useNavigate} from "react-router-dom";
 import data from '../../location.json';
 import stylepage from './home.scss'
 
-const HomeImage = styled.img `
-
-
-`
-
-const CardsContainer = styled.div`
-    
-   
-    
-    
-`
-const Card = styled.div`
 
 
 
-
-`
 function Home() {
     const navigate = useNavigate();
     const locationFiltered = data.slice(0, 6);
@@ -31,14 +17,15 @@ function Home() {
     <div>
 
 
-       <HomeImage className="homeimg" src={logo} alt="freelance"  />
-       <CardsContainer className='cardcontain'>
+       <img className="homeimg" src={logo} alt="freelance"  />
+       <h1 className='titlekasa'>Chez vous, et partout ailleur</h1>
+       <div className='cardcontain'>
            {locationFiltered.map((location, index) => (
-               <Card className='card' key={index} onClick={() => navigate(`/location/${location.id}`)}>
+               <div className='card' key={index} onClick={() => navigate(`/location/${location.id}`)}>
                    <span className='titrehome'>{location.title}</span>
-               </Card>
+               </div>
            ))}
-       </CardsContainer>
+       </div>
     </div>
   )
     
