@@ -10,9 +10,10 @@ const Collapse = ({item}) => {
         <div className='collapse' >
             <div className="rectangle" onClick={() => setToggle(!toggle)}>
                 <span className='titlecol'>{item.title}</span>
-                <ArrowUp />
+                <span  className={toggle ? 'Arrow arrow_up' : 'Arrow arrow_down'} ><ArrowUp /></span>
             </div>
             {toggle ? <p className='texte'>{item.description}</p> : ''}
+            
         </div>
     )
 }

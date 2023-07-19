@@ -1,22 +1,38 @@
 .styledlink {
-padding: 15px;
+    padding: 15px;
     color: salmon;
     text-decoration: none;
     font-size: 24px;
     text-decoration: none;
+    cursor: pointer;
+
+    .styledlink:active {
+        text-decoration: underline;
+    }
 }
 
-.styledlin:active {
-    text-decoration: underline;
-}
 
 .nav {
     display: flex;
         justify-content: space-between;
+        padding: 0px 65px 0px 65px;
 }
 
 .haerderimg {
         height: 80px;
         width: 100%;
         object-fit: cover
+}
+
+
+
+@media screen and (max-width:599px) {
+    .liens {
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    
+    
 }

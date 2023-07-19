@@ -1,4 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Monsterrat:wght@500;400&display=swap');
+
 body {
 
-padding:45px 60px 0px 45px;
+    padding:45px 0px 0px 0px;
+    font-family: Montserrat, sans-serif;
+    
+}
+
+@media screen and (max-width:599px) {
+    body {
+        padding: 0;
+        
+    }
 }

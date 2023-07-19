@@ -15,4 +15,13 @@ text-align:center;
 
 .link {
     font-size: 18px;
+    color: salmon;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.errortxt {
+    color:salmon;
 }

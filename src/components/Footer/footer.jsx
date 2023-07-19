@@ -7,14 +7,13 @@ import stylepage from './footer.scss'
 
 
 
-const FooterImage = styled.img `
-`
+
 
 function Footer() {
   return (
-    <nav className='footer'>
-      <FooterImage className='FooterImg' src={logo} alt="freelance"  />
-      <p>c 2020 Kasa.All rights reserved</p>
+    <nav className='footer' id="f">
+      <img className='FooterImg' src={logo} alt="freelance"  />
+      <p>© 2020 Kasa.All rights reserved</p>
     </nav>
   )
 }

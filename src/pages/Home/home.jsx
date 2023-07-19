@@ -11,10 +11,10 @@ import stylepage from './home.scss'
 
 function Home() {
     const navigate = useNavigate();
-    const locationFiltered = data.slice(0, 6);
+    const locationFiltered = data;
 
   return (
-    <div>
+    <div className='home'>
 
 
        <img className="homeimg" src={logo} alt="freelance"  />
@@ -22,6 +22,7 @@ function Home() {
        <div className='cardcontain'>
            {locationFiltered.map((location, index) => (
                <div className='card' key={index} onClick={() => navigate(`/location/${location.id}`)}>
+                  <img className='images' src={location.pictures[0]}></img>
                    <span className='titrehome'>{location.title}</span>
                </div>
            ))}

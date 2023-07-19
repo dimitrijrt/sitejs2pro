@@ -1,5 +1,4 @@
-import { useParams} from 'react-router-dom'
-
+import { useParams } from 'react-router-dom';
 import logo from '../../assets/images/Carrousel.png';
 import data from '../../location.json'
 import Card from '../../components/Card/card.jsx'
@@ -7,7 +6,7 @@ import style from '../../style.scss'
 import pagestyle from './location.scss'
 import {useEffect, useState} from "react";
 import Stars from "../../assets/icons/Stars"
-import Carrousel from '../../components/Carrousel/carrousel'
+import Carrousel from '../../components/Carrousel/Carrousel.jsx'
 
 
 
@@ -20,30 +19,50 @@ function Location() {
 
     return (
         
-        <div>
+        <div className='location'>
             
-            <img className='img' src={location.pictures[0]} alt="freelance"/>
-            <Carrousel/>
+            
+           <span className="img" >
+           <Carrousel />
+           </span>
+            
+            
             
             
            
            
             <div className='titrestars'>
-                <span className='titre'>{location.title}</span>
+                <div className='titre'>
+                    <span className='titrelocation'>{location.title}</span>
+                    <span className='lieulocation'>{location.location}</span>
+                </div>
+                
                  
-                <li className='stars'>
-                    <Stars/>
-                    <Stars/>
-                    <Stars/>
-                    <Stars/>
-                    <Stars/>          
-                </li>
+
+                 <div className='right'>
+                    <span>{location.host.name}</span>
+                    <img className="imghost" src={location.host.picture}/>
+                 </div>
+                
              </div>
-             <div className='link'>
-                <span>Cozy</span>
-                <span>Canal</span>
-                <span>Paris 10</span>
-            </div>
+             <div className='linkstars'>
+                <div className='link'>
+                    <span>{location.tags[0]}</span>
+                    <span>{location.tags[1]}</span>
+                    <span>{location.tags[2]}</span>
+                </div>
+                <div className='stars'>
+                        <Stars/>
+                        <Stars/>
+                        <Stars/>
+                    <span className='greystars'>
+                        <Stars fill="#E3E3E3"/>
+                        <Stars/> 
+                    </span>
+                                 
+                    </div>
+             </div>
+             
            
              <div className='cardcontainloc'>
                 <Card 
