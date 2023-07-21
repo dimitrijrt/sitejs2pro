@@ -1,19 +1,23 @@
 import './collapse.scss';
 import ArrowUp from "../../assets/icons/ArrowUp";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 
 
-const Collapse = ({item}) => {
+const Collapse = ({title, description}) => {
     const [toggle, setToggle] = useState(false);
 
     return (
         <div className='collapse' >
             <div className="rectangle" onClick={() => setToggle(!toggle)}>
-                <span className='titlecol'>{item.title}</span>
+                <span className='titlecol'>{title}</span>
                 <span  className={toggle ? 'Arrow arrow_up' : 'Arrow arrow_down'} ><ArrowUp /></span>
             </div>
-            {toggle ? <p className='texte'>{item.description}</p> : ''}
-            
+            {toggle
+                ? Array.isArray(description)
+                    ? <ul>{description.map((item) => <li>{item}</li>)}</ul>
+                    : <p className={"texte"}>{description}</p>
+                : ''}
+
         </div>
     )
 }

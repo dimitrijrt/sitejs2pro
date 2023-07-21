@@ -1,14 +1,11 @@
 import { useParams } from 'react-router-dom';
-import logo from '../../assets/images/Carrousel.png';
 import data from '../../location.json'
 import Card from '../../components/Card/card.jsx'
-import style from '../../style.scss'
-import pagestyle from './location.scss'
-import {useEffect, useState} from "react";
 import Stars from "../../assets/icons/Stars"
 import Carrousel from '../../components/Carrousel/Carrousel.jsx'
+import Collapse from "../../components/Collapse/Collapse";
 
-
+import style from './location.scss'
 
 
 
@@ -20,30 +17,18 @@ function Location() {
     return (
         
         <div className='location'>
-            
-            
            <span className="img" >
            <Carrousel />
            </span>
-            
-            
-            
-            
-           
-           
             <div className='titrestars'>
                 <div className='titre'>
                     <span className='titrelocation'>{location.title}</span>
                     <span className='lieulocation'>{location.location}</span>
                 </div>
-                
-                 
-
                  <div className='right'>
                     <span>{location.host.name}</span>
                     <img className="imghost" src={location.host.picture}/>
                  </div>
-                
              </div>
              <div className='linkstars'>
                 <div className='link'>
@@ -62,24 +47,17 @@ function Location() {
                                  
                     </div>
              </div>
-             
-           
              <div className='cardcontainloc'>
-                <Card 
+                <Collapse
+                    title={"Description"}
                     description={location.description}
-                    rating={location.rating}
-                    equipments={location.equipments}
                 />
-             </div>
-                
-      
-            
-                
-            
-                
-                
-         
+                 <Collapse
+                     title={"Equipements"}
+                     description={location.equipments}
+                 />
 
+             </div>
         </div>
     )
 }

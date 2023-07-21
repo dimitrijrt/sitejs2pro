@@ -27,7 +27,7 @@ function Apropos() {
        <img src={img} alt="photo" className="image"  />
        <div className='collapse'> 
         {data.map((item, index) => (
-            <Collapse item={item} key={index}/>
+            <Collapse title={item.title} description={item.description} key={index}/>
         ))}
         </div>
     </div>

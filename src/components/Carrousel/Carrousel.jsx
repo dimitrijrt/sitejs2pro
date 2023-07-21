@@ -45,8 +45,6 @@ const Carrousel = () => {
              <Arrowright  />
              </span>
             <p className="numero">{index+1}/{length+1}</p>
-            
-
         </div>
         
     )

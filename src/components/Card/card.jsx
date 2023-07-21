@@ -4,30 +4,22 @@ import ArrowUp from "../../assets/icons/ArrowUp";
 import style from "./card.scss";
 
 
-function Card({title, description, rating, pictures, equipments}) {
+function Card({title, description}) {
     const [toggle, setToggle] = useState(false);
     return (
         <div className='menu'>
             <div className='column'>
-                <div className='description' onClick={() => setToggle(!toggle)} >
-                    <span>Description</span>
-                    <span className={toggle ? 'Arrow arrow_up' : 'Arrow arrow_down'}><ArrowUp/></span>
-                </div>
-                <div className='wrapper' >
-                    <div className='span'>
-                        <h1>{title}</h1>
-                        {toggle ? <p>{description}</p> : ''}
-                    </div>
-                </div>
-            </div>
-            <div className='column'  >
                 <div className='equipements' onClick={() => setToggle(!toggle)}>
-                    <span  >Equipements</span>
+                    <span>{title}</span>
                     <span className={toggle ? 'Arrow arrow_up' : 'Arrow arrow_down'}><ArrowUp/></span>
                 </div>
                 <div className='wrapper'>
                     <div className='span'>
-                    {toggle ? <p>{equipments}</p> : ''}
+                        {toggle
+                            ? Array.isArray(description)
+                                ? <ul>{description.map((item) => <li>{item}</li>)}</ul>
+                                : <p>{description}</p>
+                            : ''}
                     </div>
                 </div>
             </div>
