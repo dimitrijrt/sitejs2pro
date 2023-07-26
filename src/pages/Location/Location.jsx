@@ -17,9 +17,10 @@ function Location() {
     return (
         
         <div className='location'>
-           <span className="img" >
-           <Carrousel />
-           </span>
+         
+                <Carrousel />
+           
+             
             <div className='titrestars'>
                 <div className='titre'>
                     <span className='titrelocation'>{location.title}</span>
@@ -32,9 +33,10 @@ function Location() {
              </div>
              <div className='linkstars'>
                 <div className='link'>
-                    <span>{location.tags[0]}</span>
-                    <span>{location.tags[1]}</span>
-                    <span>{location.tags[2]}</span>
+
+                         {location.tags.map((tag) => (
+                        <span className='tagstyle'>{tag} </span>
+                    ))}	
                 </div>
                 <div className='stars'>
                         <Stars/>

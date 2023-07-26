@@ -1,31 +1,22 @@
-.img {
-    width: 100%;
-        display: flex;
-        justify-content: center;
-        height: 415px;
-        object-fit: contain;
-        border-radius: 40px;
-      
-}
 
-
-
-
-
-.link span {
+.tagstyle {
     
         padding: 5px 40px;
         margin-right: 10px;
         cursor: pointer;
         border-radius: 18px;
         border: none;
-        color: #fff;
-        background-color: #FF6060;
+        background-color:salmon;
+        color: white;
 
-      
-        
-       
+}
 
+
+.cardcontainloc {
+    display:flex;
+    flex:1;
+    
+    
     
 }
 
@@ -131,7 +122,7 @@
 
 
 
-@media screen and (max-width:599px) {
+@media screen and (max-width:750px) {
 
     .linkstars {
         display: block;
@@ -155,5 +146,9 @@
 
     .titrelocation {
         text-align: left;
+    }
+
+    .cardcontainloc {
+        flex-direction: column;
     }
 }
