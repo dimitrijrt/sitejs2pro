@@ -15,8 +15,7 @@
 .cardcontainloc {
     display:flex;
     flex:1;
-    
-    
+    gap:80px;
     
 }
 
@@ -89,7 +88,9 @@
 
 .linkstars {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: end;
+    padding-top: 40px;
 }
 
 
@@ -104,9 +105,8 @@
 }
 
 .right {
-    align-items: center;
     display: flex;
-    gap:15px;
+    gap: 20px;
 }
 
 .link span {
@@ -117,6 +117,11 @@
     padding: 0px 65px 0px 65px;
 }
 
+.items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 
 
@@ -124,8 +129,13 @@
 
 @media screen and (max-width:750px) {
 
+    .items {
+        flex-direction: column;
+    }
+
     .linkstars {
-        display: block;
+        flex-direction: row-reverse;
+        justify-content: space-between;
     }
 
     .stars {
@@ -139,9 +149,9 @@
     }
 
     .right {
-        align-items: end;
+        display: flex;
         
-        
+
     }
 
     .titrelocation {

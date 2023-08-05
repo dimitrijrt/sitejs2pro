@@ -17,27 +17,26 @@ function Location() {
     return (
         
         <div className='location'>
-         
                 <Carrousel />
-           
-             
+            <div className='items'>
             <div className='titrestars'>
                 <div className='titre'>
                     <span className='titrelocation'>{location.title}</span>
                     <span className='lieulocation'>{location.location}</span>
-                </div>
-                 <div className='right'>
-                    <span>{location.host.name}</span>
-                    <img className="imghost" src={location.host.picture}/>
-                 </div>
-             </div>
-             <div className='linkstars'>
-                <div className='link'>
+                    <div className='link'>
 
                          {location.tags.map((tag) => (
                         <span className='tagstyle'>{tag} </span>
                     ))}	
                 </div>
+                </div>
+             </div>
+             <div className='linkstars'>
+               
+                <div className='right'>
+                    <span>{location.host.name}</span>
+                    <img className="imghost" src={location.host.picture}/>
+                 </div>
                 <div className='stars'>
                         <Stars/>
                         <Stars/>
@@ -47,7 +46,8 @@ function Location() {
                         <Stars/> 
                     </span>
                                  
-                    </div>
+                </div>
+             </div>
              </div>
              <div className='cardcontainloc'>
                 <Collapse
